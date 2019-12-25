@@ -1,0 +1,562 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-size: 62.5%;
+}
+
+html, body{
+     height:100%; 
+}
+
+body{
+     margin: 0;
+     padding: 0;
+     background-color: #CBEEF3;
+     background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.38'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+nav {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     margin: 0;
+     padding: 0;
+     width: 15%;
+     top: 0;
+     left: 0;
+     height: 100%;
+     z-index: 10; 
+     background-color: #ffb1b1;
+     background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23000000' fill-opacity='0.18'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+     border: 3px dashed #3F2D2A;
+     border-width: 0 2px 0 0;
+}
+
+#big-container {
+     display: flex;
+     justify-content: space-around;
+     height: 100%;
+}
+
+#container {
+     width: 80%;
+     margin: 0 auto;
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     flex-wrap: wrap;
+}
+
+.card {
+     position: relative;
+     background-image: linear-gradient(45deg, #987D7A, #9C716B);
+     border-radius: 30px;
+     border: 3px solid #3F2D2A;
+     width: 25rem;
+     min-height: 40rem;
+     margin: 2rem 3rem;
+     
+}
+
+.top-card {
+     background-color: #8D80AD;
+     width: 100%;
+     text-align: center;
+     padding: 1em 0 0;
+     border-top-left-radius: 30px;
+     border-top-right-radius: 30px;
+}
+
+.top-card h2{
+     color: white;
+     font-size: 3.6rem;
+     font-family: 'Bubblegum Sans', cursive;
+     font-weight: 400;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     width: 90%;
+     margin: 0 auto;
+     padding: 1rem 0 0.25rem;
+     padding-left: .25rem;
+     text-shadow: 2px 0 0 #3F2D2A,
+     -2px 0 0 #3F2D2A,
+     0 2px 0 #3F2D2A,
+     0 -2px 0 #3F2D2A;
+     letter-spacing: 1px;
+}
+
+.top-card h3{
+     color: white;
+     font-size: 2.5rem;
+     font-family: 'Bubblegum Sans', cursive;
+     font-weight: 400;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     width: 90%;
+     margin: 0 auto;
+     padding: 0 0.5rem 0.25rem;
+     padding-left: .25rem;
+     text-shadow: 2px 0 0 #3F2D2A,
+     -2px 0 0 #3F2D2A,
+     0 2px 0 #3F2D2A,
+     0 -2px 0 #3F2D2A;
+     letter-spacing: 1px;
+}
+
+
+
+.to-do-card {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     padding: .5rem 1rem;
+}
+
+.checkbox-container {
+     display: flex;
+     width: 100%;
+     cursor: pointer;
+     position: relative;
+     padding: .5rem 0;
+
+}
+
+.checkbox-container input{
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     cursor: pointer;
+     width: 3rem;
+     height: 3rem;
+     border: 2px solid rgb(92, 68, 64);
+     background-color: #FFFFFF;
+     border-radius: 5px;
+     user-select: none;
+     cursor: pointer;
+     font-size: 3rem;
+     flex-shrink: 0;
+}
+
+.checkbox-container h3 {
+     color: white;
+     font-size: 3rem;
+     font-family: 'Bubblegum Sans', sans-serif;
+     font-weight: 400;
+     text-shadow: 1px 1px 0 #3F2D2A,
+     -1px -1px 0 #3F2D2A,
+     -1px 1px 0 #3F2D2A,
+     1px -1px 0 #3F2D2A;
+     letter-spacing: 1px;
+     margin-left: 1.5rem;
+     user-select: none;
+     max-width: 80%;
+     padding-right: 1rem;
+     word-wrap: break-word;
+
+}
+
+.checkbox {
+     display: inline-block;
+}
+
+.checkmark {
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 24px;
+     width: 24px;
+   }
+
+   .checkmark:after {
+     content: "";
+     position: absolute;
+     display: none;
+     left: 10px;
+     top: -1px;
+     width: 10px;
+     height: 28px;
+     border: solid #8DAA91;
+     border-width: 0 6px 6px 0;
+     transform: rotate(45deg);
+   }
+
+   .checkbox-container input:checked ~ .checkmark:after{
+        display: block;
+   }
+
+   .checkbox-container input:checked ~ h3 {
+     text-decoration: line-through;
+     color: rgb(206, 206, 206);
+   }
+
+
+   .plusbutton {
+     position: fixed;
+     bottom: 1rem;
+     right: 1rem;
+     height: 64px;
+     width: 64px;
+     transition: all .4s ease; 
+   }
+
+   .plusbutton:hover {
+     fill: rgb(13, 175, 21);
+     transition: all .4s ease; 
+     height: 72px;
+     width: 72px;
+   }
+
+   .newshape {
+       fill: rgb(13, 175, 21);
+   }
+
+     .plusbutton:hover .newshape
+   {
+     fill: rgb(29, 223, 38);
+   }
+
+   .plusbutton:active .newshape{
+        fill: rgb(17, 180, 230);
+   }
+
+   .form{
+
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #ffffff7c;
+   }
+
+   form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        position: fixed;
+        background-color: black;
+        width: 40rem;
+        height: 60rem;
+        top: 50%;
+        left: 50%;
+        border-radius: 15px;
+        transform: translate(-50%, -50%);
+        background-image: linear-gradient(45deg, #987D7A, #9C716B);
+        border: 15px dashed #3F2D2A;
+   }
+
+   .checkmarkbutton {
+     border: 0;
+     background: transparent;
+     position: absolute;
+     left: 50%;
+     bottom: -4rem;
+     transform: translateX(-50%);
+     height: 70px;
+     width: 70px;
+     transform-origin: center;
+     transition: all .4s ease; 
+   }
+
+   .checkmarkshape{
+        transition: all 0.4s ease;
+   }
+
+   .checkmarkbutton:active {
+        outline: none;
+   }
+
+   .checkmarkbutton:hover{
+        transform: translateX(-50%) scale(1.25);
+   }
+
+   .checkmarkbutton #checkmarkshape
+   {
+     fill: #32BEA6;
+     transition: all .4s ease;
+   }
+
+   .checkmarkbutton:hover #checkmarkshape
+   {
+     fill: rgb(43, 175, 153);
+
+   }
+
+   .checkmarkbutton #checkmarkshape.editform
+   {
+     fill: rgb(190, 211, 3);
+   }
+
+
+   .checkmarkbutton:hover #checkmarkshape.editform
+   {
+     fill: rgb(199, 221, 0);
+   }
+
+     .checkmarkbutton:active #checkmarkshape{
+          fill: rgb(17, 180, 230);
+     }
+
+   .hidden {
+        opacity: 0;
+        pointer-events: none;
+   }
+
+   form label{
+        max-width: 90%;
+        margin: 1rem auto;
+   }
+
+   form label h3 {
+     display: inline;
+     color: white;
+     font-size: 3.6rem;
+     font-family: 'Bubblegum Sans', cursive;
+     font-weight: 400;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     margin: 0 auto;
+     padding: 1rem 0 0.5rem;
+     padding-left: .25rem;
+     text-shadow: 1px 1px 0 #3F2D2A,
+     -1px -1px 0 #3F2D2A,
+     -1px 1px 0 #3F2D2A,
+     1px -1px 0 #3F2D2A;
+     letter-spacing: 1px;
+     margin-right: 1rem;
+     text-transform: uppercase;
+     flex-grow: 0;
+   }
+
+   form label input {
+     padding: .5rem;
+     padding-left: 1rem;
+     border-radius: 5px;
+     background-color: #e2caca;
+     border: 5px dashed #3F2D2A;
+     font-size: 1rem;
+     flex-grow: 1;
+     font-family: 'Bubblegum Sans', sans-serif;
+     font-size: 2.5rem;
+     font-weight: 400;
+     max-width: 500px;
+}
+
+     .namefield {
+          margin-left: .5rem;
+     }
+
+     textarea{
+     width: 100%;
+     padding: .5rem;
+     padding-left: 1rem;
+     border-radius: 5px;
+     background-color: #e2caca;
+     border: 5px dashed #3F2D2A;
+     font-size: 1rem;
+     flex-grow: 1;
+     font-family: 'Bubblegum Sans', sans-serif;
+     font-size: 2.5rem;
+     font-weight: 400;
+     max-width: 500px;
+     }
+
+     .inline {
+          width: 100%;
+     }
+
+     .radio-container {
+          max-width: 90%;
+          margin-left: 0;
+          margin: 0 auto;
+          width: 100%;
+          max-width: 100%;
+          display: flex;
+          justify-content: space-around;
+     }
+  
+
+     .radio-container label  {
+
+          display: flex;
+          align-items: center;
+          font-size: 3rem;
+          color: white;
+          font-size: 3.6rem;
+          font-family: 'Bubblegum Sans', cursive;
+          font-weight: 400;
+          text-shadow: 1px 1px 0 #3F2D2A,
+          -1px -1px 0 #3F2D2A,
+          -1px 1px 0 #3F2D2A,
+          1px -1px 0 #3F2D2A;
+     }
+
+     .radio-box {
+          display: flex;
+          cursor: pointer;
+          position: relative;
+          padding: .5rem 0;
+     }
+
+     .radio-box input {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          cursor: pointer;
+          width: 3rem;
+          height: 3rem;
+          border: 2px solid rgb(92, 68, 64);
+          background-color: #FFFFFF;
+          border-radius: 50%;
+          user-select: none;
+          cursor: pointer;
+          font-size: 3rem;
+          flex-shrink: 0;
+          margin-right: .75rem;
+     }
+
+     .dot{
+          content: "";
+          position: absolute;
+          display: none;
+          background-color: black;
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          top: 50%;
+          left: 1rem;
+          transform: translate(0, -50%);
+        }
+
+        .radio-box input:checked ~ .dot{
+             display:block;
+        }
+
+        h4{
+          font-size: 3.6rem;
+          font-weight: 400;
+        }
+
+        .green {
+             color: rgb(19, 201, 43);
+             text-shadow: 1px 1px 0 rgb(0, 77, 10),
+          -1px -1px 0 rgb(0, 77, 10),
+          -1px 1px 0 rgb(0, 77, 10),
+          1px -1px 0 rgb(0, 77, 10);
+        }
+
+        .yellow {
+          color: rgb(216, 219, 27);
+          text-shadow: 1px 1px 0 rgb(68, 70, 0),
+          -1px -1px 0 rgb(68, 70, 0),
+          -1px 1px 0 rgb(68, 70, 0),
+          1px -1px 0 rgb(68, 70, 0);
+        }
+
+        .red {
+          color: rgb(240, 17, 17);
+          text-shadow: 1px 1px 0 rgb(80, 0, 0),
+          -1px -1px 0 rgb(80, 0, 0),
+          -1px 1px 0 rgb(80, 0, 0),
+          1px -1px 0 rgb(80, 0, 0);   
+        }
+
+        .addRow{
+             width: 80%;
+             margin: 0 auto 1rem;
+             padding: 0 1rem;
+             font-size: 1rem;
+             display: flex;
+             align-items: center;
+        }
+
+        .addRowPlus
+        {
+             color: black;
+             text-decoration: none;
+             font-size: 3rem;
+             transition: all .4s ease;
+             margin-right: 1rem;
+        }
+
+        .addRowPlus:hover
+        {
+
+             color: rgb(50, 50, 50);
+        }
+
+        a.x
+        {
+          position: absolute;
+          text-decoration: none;
+          transition: all .3s ease-in-out;
+          right: 0;
+          top: 1rem;
+          font-size: 2.5rem;
+          color: red;
+          margin-right: -.5rem;
+          opacity: 0;
+        }
+
+
+        .addRowInput {
+               padding: .5rem;
+               padding-left: 1rem;
+               border-radius: 3px;
+               background-color: #e2caca;
+               border: 3px dashed #3F2D2A;
+               font-size: 1rem;
+               flex-grow: 1;
+               font-family: 'Bubblegum Sans', sans-serif;
+               font-size: 2.5rem;
+               font-weight: 400;
+               width: 75%;
+
+        }
+
+        .svg-icon {
+          position: absolute;
+          right: 1rem;
+          width: 3rem;
+          height: 3rem;
+          transition: all .4s ease;
+          transform-origin: center;
+        }
+        
+        .svg-icon path,
+        .svg-icon polygon,
+        .svg-icon rect {
+          fill: rgb(45, 36, 70);
+
+          transition: all .4s ease;
+        }
+
+        .svg-icon:hover{
+             transform: scale(1.4);
+        }
+
+        .svg-icon:hover path{
+          fill: rgb(73, 57, 117);
+        }
+        
+        .svg-icon circle {
+          stroke: #4691f6;
+          stroke-width: 1;
+        }
+
+        .x-card {
+             position: absolute;
+             text-decoration: none;
+             font-size: 4.5rem;
+             opacity: 0;
+             top: -1.5rem;
+             right: -1.5rem;
+             color: rgb(165, 0, 0);
+             transition: all .4s ease;
+        }
